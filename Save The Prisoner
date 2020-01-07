@@ -1,0 +1,4 @@
+function saveThePrisoner(n, m, s){
+  var prisonWarned =  (s + (m - 1)) % n;
+    return prisonWarned == 0 ? n : prisonWarned;
+}
