@@ -1,0 +1,33 @@
+
+function timeConversion(s) {
+
+    var time = s;
+    var hours = Number(time.match(/^([\d]+)\:/)[1]);
+    var minutes = Number(time.match(/\:([\d]+)\:/)[1]);
+    var seconds = Number(time.match(/\:([\d]+)(AM|PM)/)[1]);
+    var AMPM = time.match(/(AM|PM)$/)[1];
+	
+    if (AMPM == "PM" && hours < 12){
+        hours = hours + 12;
+    }
+    if (AMPM == "AM" && hours == 12){
+      hours = hours - 12;
+    }
+    var sHours = hours.toString();
+    var sMinutes = minutes.toString();
+    var sSeconds = seconds.toString();
+    if (hours < 10){
+      sHours = "0" + sHours;
+    }
+    if (minutes < 10){
+      sMinutes = "0" + sMinutes;
+    }
+    if (seconds < 10){
+      sSeconds = "0" + sSeconds;
+    }
+    return (sHours + ":" + sMinutes+ ":" + sSeconds);
+
+
+}
+
+timeConversion('12:59:45AM');
