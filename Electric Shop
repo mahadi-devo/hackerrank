@@ -1,0 +1,22 @@
+function getMoneySpent(keyboards, drives, b){
+  var Maxtotal = 0;
+  for(var i = 0; i < keyboards.length; i++){
+    for(var j = 0; j < drives.length; j++){
+      
+        var total = keyboards[i] + drives[j];
+        if(!(total > b)){
+          if(total > Maxtotal){
+          Maxtotal = total;
+          }
+        
+        }
+    }
+  }
+  if(Maxtotal === 0){
+    return -1;
+  }
+  
+  return Maxtotal;
+}
+
+getMoneySpent([1, 2], [7, 6], 10);
