@@ -1,3 +1,3 @@
 # hackerrank
 
-Solved hackerrank problems submitted answers
+Solved hackerrank problems submitted answers using Javascript language
