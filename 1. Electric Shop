@@ -8,7 +8,6 @@ function getMoneySpent(keyboards, drives, b){
           if(total > Maxtotal){
           Maxtotal = total;
           }
-        
         }
     }
   }
