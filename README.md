@@ -1,3 +1,4 @@
 # hackerrank
 
-Hacker Rank Problems solution in Javascript
+Hacker Rank Problem solving Challenges solutions in Javascript
+
