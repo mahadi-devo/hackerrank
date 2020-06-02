@@ -1,0 +1,16 @@
+function countingValleys(n, s) {
+
+    let seaLevel =0, noOfvalleys =0;
+
+    let arrStep = s.split('');
+
+    for(let i =0; i < n; i++){
+        if(arrStep[i]== 'U') ++seaLevel; 
+        else if(arrStep[i]== 'D') --seaLevel;
+
+        if(seaLevel == 0 && arrStep[i] == 'U') ++noOfvalleys; 
+        
+    }
+    return noOfvalleys;
+}
+countingValleys(8, 'UDDDUDUU');
