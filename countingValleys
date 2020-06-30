@@ -1,0 +1,11 @@
+function countingValleys(n, s) {
+    let start = 0;
+    let stepCount = s.length;
+
+    s.split('').forEach(step => {
+        (step === 'U') ? ++stepCount : --stepCount;
+        (stepCount == s.length && step == 'U') ? ++start : start;    
+    })
+    return start;
+}
+countingValleys(8, 'UDDDUDUU');
