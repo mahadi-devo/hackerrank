@@ -1,0 +1,16 @@
+function jumpingOnClouds(c) {
+  let count = 0;
+  let copyArr = [...c];
+  
+  for(let i  = 1; i < copyArr.length; i++ ){
+    if(copyArr[i] === 0 &&  copyArr[i+1] === 0){
+      copyArr.splice(i, 1);
+      i--;
+    }
+  }
+  
+  copyArr.forEach(value => value === 0 ? count++ : count)
+  return count;
+}
+
+jumpingOnClouds([0, 0, 0, 0, 1, 0])
